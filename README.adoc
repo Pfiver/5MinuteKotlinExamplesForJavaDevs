@@ -1,0 +1,19 @@
+= 5 minute Kotlin examples for Java Devs
+Peti Koch
+
+Introducing Kotlin in an existing Java 8 project and showing Kotlin features with each commit.
+
+For my teammates at CSS Versicherung in Lucerne.
+
+== How to use
+
+Just review the commit history in the master branch.
+
+== Steps
+
+=== Step 1: A small Java 8 project using Maven
+
+3 classes, nothing fancy.
+
+
+
