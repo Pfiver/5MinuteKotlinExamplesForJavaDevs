@@ -13,7 +13,17 @@ Just review the commit history in the master branch.
 
 === Step 1: A small Java 8 project using Maven
 
-3 classes, nothing fancy.
+3 Java classes, nothing fancy.
 
+=== Step 2: Add Kotlin Support in the Maven pom.xml + a first peace of Kotlin code
 
+By following https://kotlinlang.org/docs/reference/using-maven.html I enhanced the existing pom.xml with the support for Kotlin.
 
+Now I have a "mixed" Java 8 and Kotlin project with the existing 3 Java classes.
+
+I added one Kotlin *data class* (KtMessage.kt) and used it in one of the existing Java classes (RunnableFactory.java).
+Kotlin *Data classes* were for me the first interesting "power feature" of Kotlin.
+I wasn't a big fan of Lombok or Google's AutoValue annotation processors and the data classes of Kotlin looked nice for implementing immutable state.
+
+Can I call Kotlin Code from Java and vice versa?
+Yes, Java Interoperability is a top priority for Kotlin.
