@@ -6,7 +6,7 @@ public class RunnableFactory {
         return () -> System.out.println(
                 Constants.HELLO_WORLD
                         + " and "
-                        + new KtMessage("Hello Kotlin World!").getText()
+                        + new KtMessage("Hello Kotlin World!").textLowerCase()
         );
     }
 

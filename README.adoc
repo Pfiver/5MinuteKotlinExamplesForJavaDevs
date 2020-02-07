@@ -11,11 +11,11 @@ Just review the commit history in the master branch.
 
 == Steps
 
-=== Step 1: A small Java 8 project using Maven
+=== Step 0: A small Java 8 project using Maven
 
 3 Java classes, nothing fancy.
 
-=== Step 2: Add Kotlin Support in the Maven pom.xml + a first peace of Kotlin code
+=== Step 1: Can I use Kotlin Code in an existing Java Project?
 
 By following https://kotlinlang.org/docs/reference/using-maven.html I enhanced the existing pom.xml with the support for Kotlin.
 
@@ -27,3 +27,43 @@ I wasn't a big fan of Lombok or Google's AutoValue annotation processors and the
 
 Can I call Kotlin Code from Java and vice versa?
 Yes, Java Interoperability is a top priority for Kotlin.
+
+=== Step 2: How do I define a method on a Kotlin class?
+
+We already have one Kotlin class, the `KtMessage` data class from step 1. So let's use that to define an exemplary method called `textLowerCase`.
+
+The class looks then e.g. like this:
+
+```
+data class KtMessage(val text: String){
+
+    fun textLowerCase(): String {
+        return text.toLowerCase()
+    }
+
+}
+```
+
+Let's have a very close look at the method definition.
+
+First, there is the `fun` keyword which is an abbreviated form of the word "function".
+I like the fact, that Kotlin is very explicit here.
+So, to define a function, you start with `fun`.
+Regarding the terms... it's ok to use the term "function" to define a method, because what is a method after all?
+It's just a function in the context of a class.
+
+Second, after the `fun` keyword does not follow the return type of the method like in Java, instead we put the name of the function, in our case `textLowerCase`.
+
+Third, we can define the parameters for the function within the following parenthesis `(...)`.
+In our first example here we don't have any parameters, we will add some parameters in a separate step.
+Let's just use `()` here for now.
+
+Fourth, we define the return type, in our case here it is a `String`.
+
+Please read the definition of the method now again: `fun textLowerCase(): String`.
+Isn't that more natural than the Java equivalent `String textLowerCase()`?
+
+For our first implementation of the function we use a full "code block" with curly brackets and the `return` keyword to stay close to the Java syntax:
+`{ return text.toLowerCase() }`.
+
+Finally, let's use the new method in `RunnableFactory.java`.
