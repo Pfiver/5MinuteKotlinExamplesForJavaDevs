@@ -7,6 +7,8 @@ public class RunnableFactory {
                 Constants.HELLO_WORLD
                         + " and "
                         + new KtMessage("Hello Kotlin World!").textLowerCase()
+                        + " and "
+                        + new JavaMessage("Hello JDK14 World!").textLowerCase()
         );
     }
 
